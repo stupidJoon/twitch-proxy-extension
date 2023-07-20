@@ -2,7 +2,7 @@
   "name": "Twitch Proxy",
   "manifest_version": 3,
   "description": "트위치 1080p 우회 확장프로그램입니다",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "action": {
     "default_popup": "popup.html"
   },

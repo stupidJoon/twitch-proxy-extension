@@ -3,12 +3,30 @@
     <meta charset="utf-8">
     <style>
       html {
-        width: 20rem;
+        background-color: #262626;
+        color: #b9a3e3;
+        height: 200px;
+      }
+      input {
+        padding: 4px;
+      }
+      button {
+        all: unset;
+        background-color: #6441a5;
+        color: white;
+        font-size: 1rem;
+        border-radius: 5%;
+        padding: 4px 8px;
+        margin: 8px 0;
+      }
+      p {
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <input type="text" size="30" placeholder="우회 서버 주소를 입력해 주세요...">
+    <h1>Twitch-Proxy</h1>
+    <input type="text" size="25" placeholder="우회 서버 주소를 입력해 주세요...">
     <button>확인</button>
     <p>프록시 서버가 없습니다. 주소를 입력해 주세요...</p>
     <script src="popup.js"></script>
