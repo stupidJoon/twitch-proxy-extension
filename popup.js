@@ -30,44 +30,16 @@ function updateRules() {
         "action": {
           "type": "redirect",
           "redirect": {
-            "regexSubstitution": "https://" + address + ":3000/usher.ttvnw.net/\\1"
+            "regexSubstitution": "https://" + address + "/https://usher.ttvnw.net/\\1"
           }
         },
         "condition": {
           "regexFilter": "https://usher.ttvnw.net/(.*)",
           "resourceTypes": ["xmlhttprequest"]
         }
-      },
-      {
-        "id": 2,
-        "priority": 1,
-        "action": {
-          "type": "redirect",
-          "redirect": {
-            "regexSubstitution": "https://" + address + ":3000/video-weaver.\\1/\\2"
-          }
-        },
-        "condition": {
-          "regexFilter": "https://video-weaver.(.*)/(.*)",
-          "resourceTypes": ["xmlhttprequest"]
-        }
-      },
-      {
-        "id": 3,
-        "priority": 1,
-        "action": {
-          "type": "redirect",
-          "redirect": {
-            "regexSubstitution": "https://" + address + ":3000/video-edge-\\1/\\2"
-          }
-        },
-        "condition": {
-          "regexFilter": "https://video-edge-(.*)/(.*)",
-          "resourceTypes": ["xmlhttprequest"]
-        }
       }
     ],
-    removeRuleIds: [1, 2, 3]
+    removeRuleIds: [1]
   });
 }
 
