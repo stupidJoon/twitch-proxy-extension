@@ -17,7 +17,7 @@ function updateRules() {
 
   if (address === '') {
     p.textContent = '프록시 서버가 없습니다. 주소를 입력해 주세요...';
-    chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: [1, 2, 3] });
+    chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: [1] });
     return;
   }
 
