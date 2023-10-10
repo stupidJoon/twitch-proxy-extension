@@ -10,7 +10,8 @@
     "declarativeNetRequest"
   ],
   "host_permissions": [
-    "https://www.twitch.tv/*",
-    "https://usher.ttvnw.net/*"
+    "https://twitch.tv/*",
+    "https://usher.ttvnw.net/*",
+    "https://*.hls.ttvnw.net/*"
   ]
 }

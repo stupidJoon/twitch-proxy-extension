@@ -17,7 +17,7 @@ function updateRules() {
 
   if (address === '') {
     p.textContent = '프록시 서버가 없습니다. 주소를 입력해 주세요...';
-    chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: [1] });
+    chrome.declarativeNetRequest.updateDynamicRules({ removeRuleIds: [1, 2] });
     return;
   }
 
@@ -37,9 +37,23 @@ function updateRules() {
           "regexFilter": "https://usher.ttvnw.net/(.*)",
           "resourceTypes": ["xmlhttprequest"]
         }
+      },
+      {
+        "id": 2,
+        "priority": 1,
+        "action": {
+          "type": "redirect",
+          "redirect": {
+            "regexSubstitution": "https://" + address + "/https://video-edge-\\1/\\2"
+          }
+        },
+        "condition": {
+          "regexFilter": "https://video-edge-(.*)/(.*)",
+          "resourceTypes": ["xmlhttprequest"]
+        }
       }
     ],
-    removeRuleIds: [1]
+    removeRuleIds: [1, 2]
   });
 }
 
