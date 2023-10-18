@@ -37,23 +37,9 @@ function updateRules() {
           "regexFilter": "https://usher.ttvnw.net/(.*)",
           "resourceTypes": ["xmlhttprequest"]
         }
-      },
-      {
-        "id": 2,
-        "priority": 1,
-        "action": {
-          "type": "redirect",
-          "redirect": {
-            "regexSubstitution": "https://" + address + "/https://video-edge-\\1/\\2"
-          }
-        },
-        "condition": {
-          "regexFilter": "https://video-edge-(.*)/(.*)",
-          "resourceTypes": ["xmlhttprequest"]
-        }
       }
     ],
-    removeRuleIds: [1, 2]
+    removeRuleIds: [1]
   });
 }
 
